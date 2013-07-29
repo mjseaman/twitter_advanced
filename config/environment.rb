@@ -41,9 +41,12 @@ env_config.each do |key, value|
 end
 
 Twitter.configure do |config|
-  p ENV['TWITTER_KEY']
   config.consumer_key = ENV['TWITTER_KEY']
   config.consumer_secret = ENV['CONSUMER_SECRET']
   config.oauth_token = ENV['OAUTH_KEY']
   config.oauth_token_secret = ENV['OAUTH_SECRET']
 end
+
+# Twitter.user_timeline("ideahed", count:10).each do |tweet|
+#   p tweet[:text]
+# end
