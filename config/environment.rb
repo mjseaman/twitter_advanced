@@ -46,7 +46,3 @@ Twitter.configure do |config|
   config.oauth_token = ENV['OAUTH_KEY']
   config.oauth_token_secret = ENV['OAUTH_SECRET']
 end
-
-# Twitter.user_timeline("ideahed", count:10).each do |tweet|
-#   p tweet[:text]
-# end

@@ -33,5 +33,7 @@ get '/tweets/:username/media' do
   @media_urls = @user.tweets.map(&:media_url).compact!
   p @media_urls
   erb :scrapbook
-
 end
+
+# get '/tweets/create' do
+#   
