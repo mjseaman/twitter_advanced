@@ -9,6 +9,7 @@ class TwitterUser < ActiveRecord::Base
       self.tweets << Tweet.create(
         text:tweet.text,
         created_at:tweet.created_at,
+        media_url: (tweet.media.empty?) ? nil : tweet.media[0].media_url
         )
     end
   end

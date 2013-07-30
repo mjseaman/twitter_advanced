@@ -4,4 +4,21 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+ //Tweet Page Load AJAX
+ // $('#tweets').on('click',function() {
+  console.log("in the click")
+  request = $.ajax({
+    url:'/tweets/',
+    type:'get', 
+    data: {username: window.location.pathname.match(/\w*$/)[0]}
+  });
+
+  request.done(function(data) {
+    $('#paris_gif').replaceWith(data)
+  });
+// });
+  
 });
+
+
+// window.location.pathname.match(/\w*$/)
